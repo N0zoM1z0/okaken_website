@@ -1,4 +1,5 @@
 # OKA☆KEN Website Reconstruction
+*OKA☆KEN ASSEMBLE!*
 
 > オカルト研究会へようこそ
 
