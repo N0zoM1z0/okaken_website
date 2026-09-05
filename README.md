@@ -1,31 +1,54 @@
 # OKA☆KEN Website Reconstruction
 
-A browser-ready reconstruction of the fictional Occult Research Club website
-seen in the TV anime *Rewrite*. The project treats the page as a real website
-made by a school club: slightly theatrical, slightly awkward, information-dense,
-and unmistakably rooted in the Japanese personal-blog conventions of its era.
+> オカルト研究会へようこそ
 
-The public site is designed from three frame references from episodes 2, 3, and
-6. It recreates the observed structure without embedding the anime frames in
-the webpage itself.
+**[Visit OKA☆KEN on the modern internet](https://n0zom1z0.github.io/okaken_website/)**
 
-## What is reconstructed
+While watching the anime adaptation of *Rewrite*, I kept having one thought:
+what if that little website from 2011—the one that had only ever been alive for
+a few seconds inside the anime—could somehow make it onto the modern internet?
 
-- forest-textured masthead with the two-line red welcome title;
-- search box integrated into the bottom-right of the masthead;
-- nine-item gray navigation strip;
-- burgundy page field and three-column blog layout;
-- black-green side panels, gray-green article cards, red headings, and cyan links;
-- the category, archive, popular/recent-article, link, and comment affordances;
-- changing archive counts suggested by the episode 2 → 3 → 6 progression;
-- a deliberately period-appropriate visitor counter and `Last Update` footer.
+So here it is. XD
 
-The surface is intentionally old-fashioned. The implementation underneath is
-accessible, responsive, dependency-free, and usable with a keyboard.
+This is not a modern *Rewrite* fan portal wearing the colors of an old screenshot.
+It is meant to feel like **the actual OKA☆KEN website**: the lovingly questionable
+homepage that Kotarou might have built for the Occult Research Club, complete
+with dramatic red lettering, a suspiciously dark forest, far too many sidebars,
+and a hit counter that is taking its job very seriously.
+
+## What came back from 2011
+
+The reconstruction is based on three anime frames from episodes 2, 3, and 6.
+Together they reveal a surprising amount: the two-line welcome masthead, the
+nine-part gray navigation bar, the burgundy page background, the black-green
+side panels, the gray article cards, and that wonderfully specific mix of red
+headings and cyan links.
+
+The site follows the same little timeline seen in the anime. The home page opens
+in its episode 2 state with Kotarou's first post; the category pages feel more
+like episodes 3 and 6, where the archive has filled up with sightings, rumors,
+arguments, and increasingly dubious reports from around Kazamatsuri.
+
+It is intentionally old-fashioned on the surface. Underneath, it still behaves
+nicely on current browsers, phones, and keyboards. Time travel should not require
+horizontal scrolling.
+
+## Things you can poke
+
+- Browse reports by category or month.
+- Search titles, article text, and category names.
+- Open the gloriously low-stakes comment threads.
+- Visit the club guestbook.
+- Submit your own occult report and find it waiting after a reload.
+- Watch the visitor counter remember that you have been here.
+
+Reports and counter values live only in your browser through `localStorage`.
+Nothing is uploaded or collected; this is a static page with delusions of being
+a real school-club CMS.
 
 ## Run locally
 
-No build step or package installation is required:
+The website itself has no build step and no runtime dependencies:
 
 ```bash
 python3 -m http.server 4173
@@ -33,36 +56,37 @@ python3 -m http.server 4173
 
 Then open <http://localhost:4173>.
 
-For the automated source checks:
+To run the source and browser tests:
 
 ```bash
 npm test
 ```
 
-## Interaction notes
+## A small piece of website archaeology
 
-- Navigation and category lists filter the investigation archive.
-- Search scans titles, article text, and category names.
-- The monthly archive changes the visible report set.
-- Comment links expand locally rendered thread fragments.
-- The submission form stores reports in the current browser only; there is no
-  remote database or data collection.
-- The visitor counter is also local to the browser.
+The original episode frames are kept under
+[`pics_from_anime/`](pics_from_anime/) so every layout decision can be traced
+back to something visible in the anime. They are research references only; the
+public webpage does not use anime pixels as site artwork. The forest texture and
+other visual details are recreated in code.
 
-## Research material and rights
+For the full evidence map—what is directly visible, what can be inferred, and
+where I had to make a period-appropriate guess—see
+[`docs/reconstruction-notes.md`](docs/reconstruction-notes.md).
 
-The frame references are retained under [`pics_from_anime/`](pics_from_anime/)
-for reproducible visual archaeology. They are not covered by the MIT License.
-See [`NOTICE.md`](NOTICE.md) for the full rights and attribution statement, and
-[`docs/reconstruction-notes.md`](docs/reconstruction-notes.md) for the evidence
-map and design decisions.
+## Rights and attribution
 
 *Rewrite* and the referenced animation material remain the property of their
-respective rights holders. Official anime copyright notice:
-`©VisualArt's/Key/Rewrite Project`.
+respective rights holders. The screenshots are not covered by this project's
+MIT License. See [`NOTICE.md`](NOTICE.md) for the complete attribution and
+third-party material statement.
+
+Official anime copyright notice: `©VisualArt's/Key/Rewrite Project`.
 
 ## License
 
 Original code and documentation are available under the [MIT License](LICENSE).
 This grant excludes third-party intellectual property and all anime reference
 screenshots.
+
+Built for the simple joy of giving fictional infrastructure a real URL.
