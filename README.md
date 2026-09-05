@@ -17,6 +17,8 @@ homepage that Kotarou might have built for the Occult Research Club, complete
 with dramatic red lettering, a suspiciously dark forest, far too many sidebars,
 and a hit counter that is taking its job very seriously.
 
+*And honestly? Kotarou's website looks pretty damn cool. XD*
+
 ## What came back from 2011
 
 The reconstruction is based on three anime frames from episodes 2, 3, and 6.
