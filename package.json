@@ -1,0 +1,15 @@
+{
+  "name": "okaken-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A period-authentic reconstruction of the fictional OKA☆KEN website from Rewrite.",
+  "scripts": {
+    "test": "npm run test:source && npm run test:browser",
+    "test:source": "node --test tests/site.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

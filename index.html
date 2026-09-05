@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5f181a">
+    <meta
+      name="description"
+      content="風祭学院オカルト研究会、通称OKA☆KENの調査記録。都市伝説・怪談・心霊スポット・UFO・UMA情報を募集中。"
+    >
+    <title>オカルト研究会へようこそ｜OKA☆KEN</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <div class="site-shell">
+      <header class="site-header" id="top">
+        <div class="forest-canopy" aria-hidden="true"></div>
+        <a class="site-title" href="#home" aria-label="OKA☆KEN ホーム">
+          <span>オカルト研究会へ</span>
+          <strong>ようこそ</strong>
+        </a>
+
+        <form class="search-form" id="search-form" role="search">
+          <label class="visually-hidden" for="search-input">サイト内検索</label>
+          <input id="search-input" name="query" type="search" autocomplete="off">
+          <button type="submit">検索</button>
+        </form>
+
+        <p class="club-id">KAZAMATSURI ACADEMY OCCULT RESEARCH CLUB</p>
+      </header>
+
+      <nav class="main-navigation" aria-label="主要メニュー">
+        <a href="#home" data-route="home">ホーム</a>
+        <a href="#category/都市伝説" data-category="都市伝説">都市伝説</a>
+        <a href="#category/怪談" data-category="怪談">怪談</a>
+        <a href="#category/心霊スポット" data-category="心霊スポット">心霊スポット</a>
+        <a href="#category/UFO" data-category="UFO">UFO</a>
+        <a href="#category/UMA" data-category="UMA">UMA</a>
+        <a href="#category/体験談" data-category="体験談">体験談</a>
+        <a href="#category/ニュース" data-category="ニュース">ニュース</a>
+        <a href="#guestbook" data-route="guestbook">掲示板</a>
+      </nav>
+
+      <div class="ticker" aria-label="オカ研からのお知らせ">
+        <span class="ticker-label">★ お知らせ ★</span>
+        <div class="ticker-window">
+          <p>風祭市内の怪奇現象・都市伝説を調査中！　気合いの入ったネタを待ってるでおじゃる！</p>
+        </div>
+      </div>
+
+      <main id="main-content" tabindex="-1">
+        <h1 class="page-context" id="page-context">当ブログについて</h1>
+
+        <div class="site-grid">
+          <aside class="sidebar sidebar-left" aria-label="カテゴリとリンク">
+            <section class="side-panel">
+              <h2>カテゴリ</h2>
+              <ul class="category-list" id="category-list">
+                <li><a href="#category/都市伝説">都市伝説 <span>（31）</span></a></li>
+                <li><a href="#category/怪談">怪談 <span>（5）</span></a></li>
+                <li><a href="#category/心霊スポット">心霊スポット <span>（11）</span></a></li>
+                <li><a href="#category/UFO">UFO <span>（6）</span></a></li>
+                <li><a href="#category/UMA">UMA <span>（28）</span></a></li>
+                <li><a href="#category/体験談">体験談 <span>（40）</span></a></li>
+                <li><a href="#category/ニュース">ニュース <span>（8）</span></a></li>
+                <li><a href="#category/未分類">未分類 <span>（203）</span></a></li>
+              </ul>
+            </section>
+
+            <section class="side-panel links-panel">
+              <h2>リンク</h2>
+              <a class="forest-link" href="#category/心霊スポット">
+                <span class="link-moon"></span>
+                <strong>風祭・深夜探訪</strong>
+                <small>森の向こう側へ…</small>
+              </a>
+              <ul class="text-links">
+                <li><a href="#guestbook">情報提供掲示板</a></li>
+                <li><a href="#about">このサイトについて</a></li>
+              </ul>
+            </section>
+
+            <section class="side-panel mini-profile">
+              <h2>オカ研データ</h2>
+              <dl>
+                <div><dt>部長</dt><dd>千里 朱音</dd></div>
+                <div><dt>特命隊長</dt><dd>天王寺 瑚太朗</dd></div>
+                <div><dt>活動場所</dt><dd>風祭学院</dd></div>
+              </dl>
+            </section>
+          </aside>
+
+          <section class="content-column" aria-live="polite" aria-busy="false">
+            <div id="results-summary" class="results-summary" hidden></div>
+            <div id="article-list"></div>
+
+            <noscript>
+              <article class="article-card">
+                <h2>JavaScriptを有効にしてください</h2>
+                <div class="article-body">
+                  <p>調査記録の検索・カテゴリ表示にはJavaScriptが必要です。</p>
+                </div>
+              </article>
+            </noscript>
+
+            <button class="submit-button" id="open-submission" type="button">投稿する ♪</button>
+          </section>
+
+          <aside class="sidebar sidebar-right" aria-label="アーカイブと記事一覧">
+            <section class="side-panel archive-panel">
+              <h2>月別アーカイブ</h2>
+              <label class="visually-hidden" for="archive-select">月を選択</label>
+              <select id="archive-select">
+                <option value="">月を選択</option>
+                <option value="2011-10">2011年10月</option>
+                <option value="2011-09">2011年9月</option>
+                <option value="2011-08">2011年8月</option>
+                <option value="2011-07">2011年7月</option>
+              </select>
+            </section>
+
+            <section class="side-panel">
+              <h2>人気記事</h2>
+              <ol class="post-links" id="popular-posts"></ol>
+            </section>
+
+            <section class="side-panel">
+              <h2>最新記事</h2>
+              <ul class="post-links" id="recent-posts"></ul>
+            </section>
+
+            <section class="side-panel counter-panel">
+              <h2>アクセス</h2>
+              <p class="counter-label">あなたは</p>
+              <output class="counter" id="visitor-counter" aria-label="訪問者番号">00000000</output>
+              <p class="counter-label">人目の調査員です</p>
+            </section>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="site-footer" id="about">
+        <p>
+          <a href="#top">▲ ページ上部へ</a> ｜
+          <button class="footer-link" id="reset-local-data" type="button">ローカル投稿を消去</button>
+        </p>
+        <p class="last-update">Last Update : 2011.10.27　／　管理：風祭学院オカルト研究会</p>
+        <p class="fan-notice">
+          非公式・非営利のファン制作サイトです。『Rewrite』および関連素材の権利は各権利者に帰属します。<br>
+          ©VisualArt's/Key/Rewrite Project
+        </p>
+      </footer>
+    </div>
+
+    <dialog id="submission-dialog">
+      <form method="dialog" class="dialog-close-form">
+        <button value="cancel" aria-label="投稿画面を閉じる">×</button>
+      </form>
+      <form id="submit-report-form">
+        <h2>怪奇情報 投稿フォーム</h2>
+        <p class="dialog-note">身近で見聞きした謎・事件を教えてください！</p>
+
+        <label for="report-name">お名前（ハンドルネーム）</label>
+        <input id="report-name" name="name" maxlength="24" required>
+
+        <label for="report-category">カテゴリ</label>
+        <select id="report-category" name="category" required>
+          <option value="都市伝説">都市伝説</option>
+          <option value="怪談">怪談</option>
+          <option value="心霊スポット">心霊スポット</option>
+          <option value="UFO">UFO</option>
+          <option value="UMA">UMA</option>
+          <option value="体験談">体験談</option>
+          <option value="未分類">よくわからない</option>
+        </select>
+
+        <label for="report-title">件名</label>
+        <input id="report-title" name="title" maxlength="60" required>
+
+        <label for="report-body">情報の内容</label>
+        <textarea id="report-body" name="body" rows="7" maxlength="800" required></textarea>
+
+        <p class="privacy-note">※ 投稿内容はこのブラウザ内だけに保存されます。</p>
+        <div class="dialog-actions">
+          <button type="submit">この内容で投稿</button>
+          <button type="button" id="cancel-submission">やめる</button>
+        </div>
+      </form>
+    </dialog>
+
+    <template id="article-template">
+      <article class="article-card">
+        <header class="article-header">
+          <h2><a href="#"></a></h2>
+          <p class="article-meta"></p>
+        </header>
+        <div class="article-body"></div>
+        <footer class="article-footer">
+          <time></time>
+          <button class="comment-toggle" type="button"></button>
+        </footer>
+        <div class="comments" hidden></div>
+      </article>
+    </template>
+  </body>
+</html>

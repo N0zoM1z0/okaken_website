@@ -1,0 +1,6 @@
+chat_with_gpt/
+node_modules/
+playwright-report/
+test-results/
+.DS_Store
+*.log
